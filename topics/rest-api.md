@@ -524,7 +524,16 @@ http://teamcity:8111/app/rest/projects/<projectLocator>/projectFeatures
 
 To filter features, add `?locator=<projectFeaturesLocator>` to the URL, for example to find all issue tracker features of GitHub type, use the locator `type:IssueTracker,property(name:type,value:GithubIssues)`.
 
+
+#### Cloud Profiles
+
+<table>
+
+<tr><td width="200"></td><td></td></tr>
+<tr><td>
+
 </td></tr>
+
 
 <tr><td>
 
