@@ -530,10 +530,6 @@ To filter features, add `?locator=<projectFeaturesLocator>` to the URL, for exam
 <table>
 
 <tr><td width="200"></td><td></td></tr>
-<tr><td>
-
-</td></tr>
-
 
 <tr><td>
 
