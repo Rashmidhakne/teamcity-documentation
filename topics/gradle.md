@@ -5,7 +5,7 @@ _The Gradle Build Runner_ runs [Gradle](http://www.gradle.org) projects.
 
 <note>
 
-To run builds with Gradle, you need to have Gradle 0.9\-rc\-1 or higher installed on all the agent machines. Alternatively, if you use the [Gradle wrapper](https://docs.gradle.org/3.3/userguide/gradle_wrapper.html), you need to have properly configured Gradle Wrapper scripts checked in to your Version Control.
+To run builds with Gradle, you need to have Gradle 0.9-rc-1 or higher installed on all the agent machines. Alternatively, if you use the [Gradle wrapper](https://docs.gradle.org/3.3/userguide/gradle_wrapper.html), you need to have properly configured Gradle Wrapper scripts checked in to your Version Control.
 </note>
 
 
@@ -78,7 +78,7 @@ Additional Gradle command line parameters
 
 <td>
 
-Optionally, specify the space\-separated list of command line parameters to be passed to Gradle.
+Optionally, specify the space-separated list of command line parameters to be passed to Gradle.
 
 
 </td></tr><tr>
