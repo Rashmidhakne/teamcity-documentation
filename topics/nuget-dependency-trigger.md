@@ -30,11 +30,9 @@ For a TeamCity server running on __Linux__, the NuGet dependency trigger will re
 
 You can also opt to trigger build if pre-release package version is detected by selecting corresponding checkbox. Note that this is only supported for NuGet version 1.8 or newer.
 
- __  __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="nuget.md">NuGet</a>
+        </category>
+</seealso>
 
-__See also:__
-
-
-__Administrator's Guide__: [NuGet](nuget.md)
-
-__ __

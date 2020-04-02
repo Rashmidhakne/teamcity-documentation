@@ -162,11 +162,13 @@ MSBuild runner generates an MSBuild script that includes user's script. This scr
   
 
 
-__  __
-
-__See also:__
-
-__Concepts__: [Build Runner](build-runner.md) | [Build Checkout Directory](build-checkout-directory.md)   
-__Administrator's Guide__: [NUnit for MSBuild](nunit-for-msbuild.md) | [MSBuild Service Tasks](msbuild-service-tasks.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="build-runner.md">Build Runner</a>
+            a href="build-checkout-directory.md">Build Checkout Directory</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="nunit-for-msbuild.md">NUnit for MSBuild</a>
+            <a href="msbuild-service-tasks.md">MSBuild Service Tasks</a>
+        </category>
+</seealso>

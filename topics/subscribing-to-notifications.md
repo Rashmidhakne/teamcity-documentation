@@ -540,10 +540,8 @@ http://teamcity.server:8111/httpAuth/feed.html?buildTypeId=bt1&itemsType=builds&
 
 ```
 
- __  __
-
-__See also:__
-
-__Administrator's Guide__: [Customizing Notifications](customizing-notifications.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="customizing-notifications.md">Customizing Notifications</a>
+        </category>
+</seealso>

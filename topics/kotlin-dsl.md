@@ -568,11 +568,11 @@ _Solution_: Use tokens instead of passwords. Refer to the [related section](stor
 
 
 
-__  __
- 
-__See also:__
-
-__Administrator's Guide__: [Storing Project Settings in Version Control](storing-project-settings-in-version-control.md)   
-__TeamCity blog__: [Configuration as Code, Part 1: Getting Started with Kotlin DSL](https://blog.jetbrains.com/teamcity/2019/03/configuration-as-code-part-1-getting-started-with-kotlin-dsl/)
-
-__ __
+<seealso>
+        <category ref="blog">
+            <a href="https://blog.jetbrains.com/teamcity/2019/03/configuration-as-code-part-1-getting-started-with-kotlin-dsl/">Configuration as Code, Part 1: Getting Started with Kotlin DSL</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="storing-project-settings-in-version-control.md">Storing Project Settings in Version Control</a>
+        </category>
+</seealso>

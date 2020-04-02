@@ -45,12 +45,13 @@ Some of the hidden artifacts are:
 All artifacts published by a build are stored in the agent's artifacts cache in the `<Build Agent home>\system\.artifacts_cache` directory, which helps speed up artifact dependencies in some cases.   
 However, depending on the size of artifacts, [clean-up](clean-up.md), and other settings, artifacts caching may cause low disk space on the agent. You can [configure](free-disk-space.md#Configuring+artifacts+cache) storing published artifacts in the agent cache.
 
-__  __
-
-__See also:__
-
-
-__Concepts__: [Dependent Build](dependent-build.md)   
-__Administrator's Guide__: [Configuring General Settings](configuring-general-settings.md) | [Configuring Dependencies](configuring-dependencies.md) | [Patterns For Accessing Build Artifacts](patterns-for-accessing-build-artifacts.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="dependent-build.md">Dependent Build</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="configuring-general-settings.md">Configuring General Settings</a>
+            <a href="configuring-dependencies.md">Configuring Dependencies</a>
+            <a href="patterns-for-accessing-build-artifacts.md">Patterns For Accessing Build Artifacts</a>
+        </category>
+</seealso>

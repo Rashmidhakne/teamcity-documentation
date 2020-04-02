@@ -250,11 +250,11 @@ To check TeamCity upgrade availability for your IntelliJ IDEA licenses and to re
 [//]: # (Internal note. Do not delete. "Licensing Policyd197e452.txt")    
 
 
- __  __
-
-__See also:__
-
-__Concepts__: [Build Agent](build-agent.md)   
-__Licensing__: [Licensing &amp; Upgrade](http://www.jetbrains.com/teamcity/buy/index.html)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="build-agent.md">Build Agent</a>
+        </category>
+        <category ref="licensing">
+            <a href="http://www.jetbrains.com/teamcity/buy/index.html">Licensing &amp; Upgrade</a>
+        </category>
+</seealso>

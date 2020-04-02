@@ -214,10 +214,8 @@ During feed rendering, the template is evaluated to get the feed content. The re
 
 See the default template for an example of available input variables and output variables.
 
- __  __
-
-__See also:__
-
-__User's Guide__: [Subscribing to Notifications](subscribing-to-notifications.md)
-
-__ __
+ <seealso>
+        <category ref="user-guide">
+            <a href="subscribing-to-notifications.md">Subscribing to Notifications</a>
+        </category>
+</seealso>

@@ -169,10 +169,8 @@ Pathname of the VOB tag (whether or not the VOB is mounted) or of any file syste
 Make sure that the user that runs the TeamCity server process is also a ClearCase view owner.
 </tip>
 
- __  __
-
-__See also:__
-
-__Administrator's Guide__: [VCS Checkout Mode](vcs-checkout-mode.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="vcs-checkout-mode.md">VCS Checkout Mode</a>
+        </category>
+</seealso>

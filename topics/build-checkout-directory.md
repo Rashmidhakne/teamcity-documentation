@@ -65,10 +65,8 @@ The time frame for automatic directory expiration can be changed by specifying a
 
 Expiration-based directory cleaning is performed in the background when the build agent is idle (no builds are running).
 
- __  __
-
-__See also:__
-
-__Administrator's Guide__: [Configuring VCS Settings](configuring-vcs-settings.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="configuring-vcs-settings.md">Configuring VCS Settings</a>
+        </category>
+</seealso>

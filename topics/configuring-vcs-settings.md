@@ -137,10 +137,11 @@ You can use a [Branch Filter](branch-filter.md) to limit the set of branches ava
  
  
  
- __  __
-
-__See also:__
-
-__Administrator's Guide__: [Configuring VCS Roots](configuring-vcs-roots.md) | [VCS Checkout Rules](vcs-checkout-rules.md) | [VCS Checkout Mode](vcs-checkout-mode.md) | [VCS Labeling](vcs-labeling.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="configuring-vcs-roots.md">Configuring VCS Roots</a>
+            <a href="vcs-checkout-rules.md">VCS Checkout Rules</a>
+            <a href="vcs-checkout-mode.md">VCS Checkout Mode</a>
+            <a href="vcs-labeling.md">VCS Labeling</a>
+        </category>
+</seealso>

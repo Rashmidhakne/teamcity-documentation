@@ -54,10 +54,8 @@ When the queue size reaches the limit, TeamCity will pause [Configuring Build Tr
 
  While __automatic__ triggering is paused, it is still possible to add builds to the queue [manually](triggering-a-custom-build.md).
 
- __  __
-
-__See also:__
-
-__Concepts__: [Build Queue](build-queue.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="build-queue.md">Build Queue</a>
+        </category>
+</seealso>

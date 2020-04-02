@@ -125,11 +125,8 @@ If you plan to modify the configuration manually, note that there are entries in
 
 See also the related [section](how-to.md#Move+TeamCity+Projects+from+One+Server+to+Another) on moving projects between TeamCity servers.
 
-__  __
-
-__See also:__
-
-
-__Installation and Upgrade__: [TeamCity Data Backup](teamcity-data-backup.md)
-
-__ __
+<seealso>
+        <category ref="installation">
+            <a href="teamcity-data-backup.md">TeamCity Data Backup</a>
+        </category>
+</seealso>

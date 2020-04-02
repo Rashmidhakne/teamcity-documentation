@@ -171,11 +171,11 @@ You can configure location of the logs by altering the value of the `teamcity_lo
 
 For additional options on tweaking logging, refer to the [TeamCity Server Logs](teamcity-server-logs.md#Changing+Logging+Configuration) page.
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [TeamCity Server Logs](teamcity-server-logs.md)   
-__Troubleshooting__: [Reporting Issues](reporting-issues.md)
-
-__ __
+<seealso>
+        <category ref="troubleshooting">
+            <a href="reporting-issues.md">Reporting Issues</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="teamcity-server-logs.md">TeamCity Server Logs</a>
+        </category>
+</seealso>

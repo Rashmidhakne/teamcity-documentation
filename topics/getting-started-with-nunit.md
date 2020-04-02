@@ -156,10 +156,8 @@ In this case `5Oqkbf9J2qJNkUK4KEtKvxs8TFFnlrno.nunit` is the NUnit project file,
 
 <img src="nunit-hidden-artifacts.png" alt="NUnit hidden artifacts" width="692"/>
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [NUnit Support](nunit-support.md)
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="nunit-support.md">NUnit Support</a>
+        </category>
+</seealso>

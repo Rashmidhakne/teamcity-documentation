@@ -82,11 +82,11 @@ Investigation Auto Assigner can [delay automatic assignment of investigations](i
 
 Note that if [branches](working-with-feature-branches.md#Configuring+branches) are configured for a VCS Root, flaky tests are detected for the default branch only.
 
-__  __
-
-__See also:__
-
-__Concepts__: [Testing Frameworks](testing-frameworks.md)   
-__User's Guide__: [Working with Build Results](working-with-build-results.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="testing-frameworks.md">Testing Frameworks</a>
+        </category>
+        <category ref="user-guide">
+            <a href="working-with-build-results.md">Working with Build Results</a>
+        </category>
+</seealso>

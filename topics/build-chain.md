@@ -101,12 +101,12 @@ From this page you can also:
 If dependencies are configured, you can view their details on the build results page, the __Dependencies__ tab. This tab also displays indirect dependencies, for example, if a build A depends on a build B which depends on builds C and D, then these builds C and D are indirect dependencies for build A.   
 The tab also displays artifacts downloaded and delivered by the builds of the chain. It also allows grouping/ungrouping builds and highlighting the builds reused from previous chains ([suitable builds](snapshot-dependencies.md#Suitable+Builds)).
 
- __  __
-
-__See also:__
-
-
-__Concepts__: [Dependent Build](dependent-build.md)   
-__Administrator's Guide__: [Configuring Dependencies](configuring-dependencies.md) | [Build Dependencies Setup](build-dependencies-setup.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="dependent-build.md">Dependent Build</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="configuring-dependencies.md">Configuring Dependencies</a>
+            <a href="build-dependencies-setup.md">Build Dependencies Setup</a>
+        </category>
+</seealso>

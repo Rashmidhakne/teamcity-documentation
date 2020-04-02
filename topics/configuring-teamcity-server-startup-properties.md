@@ -43,12 +43,12 @@ The process of setting an environment variable depends on your operating system.
 
 Make sure the environment variables are set for the user whose account is used to run TeamCity or as global environment variables. You might need to reboot the machine after the environment change for the changes to have effect.
 
- __  __
+ <seealso>
+        <category ref="concepts">
+            <a href="teamcity-data-directory.md">TeamCity Data Directory</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="configuring-build-agent-startup-properties.md">Configuring Build Agent Startup Properties</a>
+        </category>
+</seealso>
 
-__See also:__
-
-
-__Concepts__: [TeamCity Data Directory](teamcity-data-directory.md)    
-__Administrator's Guide__: [Configuring Build Agent Startup Properties](configuring-build-agent-startup-properties.md) 
-
-__ __

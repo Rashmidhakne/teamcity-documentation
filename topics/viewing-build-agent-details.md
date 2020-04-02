@@ -65,11 +65,12 @@ The page allows viewing and downloading the logs.
 The tab lists system properties, environment variables, and configuration parameters. Refer to the [Configuring Build Parameters](configuring-build-parameters.md) page for more information on different types of parameters.
 
 
-__  __
-
-__See also:__
-
-__Concepts__: [Build Agent](build-agent.md) | [Run Configuration Policy](run-configuration-policy.md)   
-__Installation and Upgrade__: [Installing and Running Additional Build Agents](installation.md)
-
-__ __
+<seealso>
+        <category ref="installation">
+            <a href="installation.md">Installing and Running Additional Build Agents</a>
+        </category>
+        <category ref="concepts">
+            <a href="build-agent.md">Build Agent</a>
+            <a href="run-configuration-policy.md">Run Configuration Policy</a>
+        </category>
+</seealso>

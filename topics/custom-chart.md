@@ -1069,10 +1069,17 @@ Note that custom value keys should be unique and should not interfere with value
 
 __ __
 
-__See also:__
-
-__Concepts__: [Code Coverage](code-coverage.md) | [Code Inspection](code-inspection.md) | [Code Duplicates](code-duplicates.md)   
-__User's Guide__: [Statistic Charts](statistic-charts.md)   
-__Extending TeamCity__: [Build Script Interaction with TeamCity](build-script-interaction-with-teamcity.md) | [Custom Statistics](https://confluence.jetbrains.com/display/TCD18/Custom+Statistics)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="code-coverage.md">Code Coverage</a>
+            <a href="code-inspection.md">Code Inspection</a>
+            <a href="code-duplicates.md">Code Duplicates</a>
+        </category>
+        <category ref="user-guide">
+            <a href="statistic-charts.md">Statistic Charts</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="build-script-interaction-with-teamcity.md">Build Script Interaction with TeamCity</a>
+            <a href="https://plugins.jetbrains.com/docs/teamcity/custom-statistics.html">Custom Statistics</a>
+        </category>
+</seealso>

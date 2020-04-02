@@ -160,10 +160,8 @@ For information on configuring Basic HTTP Authentication directly in the `<`[`Te
 Please refer to the [dedicated page](ntlm-http-authentication.md).
 
 
- __  __
-
-__See also:__
-
-__Concepts__: [Authentication Modules](authentication-modules.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="authentication-modules.md">Authentication Modules</a>
+        </category>
+</seealso>

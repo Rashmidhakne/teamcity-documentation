@@ -49,9 +49,9 @@ Any of these steps may solve your issue. Feel free to leave feedback of you expe
 
 __ __
  
- __See also:__
-
-
-__Administrator's Guide__: [.NET Testing Frameworks Support](net-testing-frameworks-support.md) | [NUnit support](nunit-support.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="net-testing-frameworks-support.md">.NET Testing Frameworks Support</a>
+            <a href="nunit-support.md">NUnit support</a>
+        </category>
+</seealso>

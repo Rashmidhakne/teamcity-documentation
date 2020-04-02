@@ -575,10 +575,8 @@ After the second agent is installed, register a new service for it as mentioned 
 For step-by-step instructions on installing a second Windows agent as a service, see a related [external blog post](https://handcraftsman.wordpress.com/2010/07/20/multiple-teamcity-build-agents-on-one-server/).
 </tip>
 
-__  __
-
-__See also:__
-
-__Concepts__: [Build Agent](build-agent.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="build-agent.md">Build Agent</a>
+        </category>
+</seealso>

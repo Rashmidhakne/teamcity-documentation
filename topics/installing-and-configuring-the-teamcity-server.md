@@ -329,10 +329,8 @@ Out-of-the-box TeamCity server installation is suitable for evaluation purposes.
 Make sure to review the [notes on configuring the server for performance](how-to.md#Configuring+TeamCity+Server+for+Performance) and [security notes](how-to.md#TeamCity+Security+Notes).
 
 
-__  __
-
-__See also:__
-
-__Installation and Upgrade__: [Setting up and Running Additional Build Agents](setting-up-and-running-additional-build-agents.md) 
-
-__ __
+<seealso>
+        <category ref="installation">
+            <a href="setting-up-and-running-additional-build-agents.md">Setting up and Running Additional Build Agents</a>
+        </category>
+</seealso>

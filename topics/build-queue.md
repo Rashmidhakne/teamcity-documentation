@@ -54,11 +54,11 @@ The build queue can be paused automatically [if the TeamCity Server runs out of 
 
 When the queue is paused, every page in TeamCity will contain a message with information on the reasons for pausing.
 
- __  __
-
-__See also:__
-
-__Concepts__: [Build Chain](build-chain.md)    
-__Administrator's Guide__: [Ordering Build Queue](ordering-build-queue.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="build-chain.md">Build Chain</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="ordering-build-queue.md">Ordering Build Queue</a>
+        </category>
+</seealso>

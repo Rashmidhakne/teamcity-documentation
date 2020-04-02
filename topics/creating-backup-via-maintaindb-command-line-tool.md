@@ -83,11 +83,9 @@ maintainDB backup --data-dir <absolute path to the custom backup directory>
 
 If you customize TeamCity server startup options via `TEAMCITY_SERVER_OPTS/TEAMCITY_SERVER_MEM_OPTS` environment variables or use custom JDK installation to run the server, you might need to run `maintainDB` script with related options added into `TEAMCITY_MAINTAINDB_OPTS/TEAMCITY_MAINTAINDB_MEM_OPTS` environment variables and run the script with all the same environment as the TeamCity server, so that the same JVM is used.
  
- __  __
-
-__See also:__
-
-
-__Installation and Upgrade__: [Setting up an External Database](setting-up-an-external-database.md) | [Migrating to an External Database](migrating-to-an-external-database.md)
-
-__ __
+ <seealso>
+        <category ref="installation">
+            <a href="setting-up-an-external-database.md">Setting up an External Database</a>
+            <a href="migrating-to-an-external-database.md">Migrating to an External Database</a>
+        </category>
+</seealso>

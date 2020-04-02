@@ -36,10 +36,8 @@ For the details on configuring individual build steps, refer to:
 
 <toc/>
 
- __  __
-
-__See also:__
-
-__Concepts__: [Build Runner](build-runner.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="build-runner.md">Build Runner</a>
+        </category>
+</seealso>

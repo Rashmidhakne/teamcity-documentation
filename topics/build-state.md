@@ -268,11 +268,13 @@ If such an error occurs, TeamCity:
 * doesn't show such build as the last finished build on the overview page
 * such builds will not affect the build configuration status and the status of developer changes
 * shows a "configuration error" stripe for a build configuration with such a build
-  __  __
-
-__See also:__
-
-__Concepts__: [Build Configuration Status](build-configuration.md) | [Change](change.md) | [Change State](change-state.md)    
-__User's Guide__: [Viewing Your Changes](viewing-your-changes.md)
-
-__ __
+  <seealso>
+        <category ref="concepts">
+            <a href="build-configuration.md">Build Configuration Status</a>
+            <a href="change.md">Change</a>
+            <a href="change-state.md">Change State</a>
+        </category>
+        <category ref="user-guide">
+            <a href="viewing-your-changes.md">Viewing Your Changes</a>
+        </category>
+</seealso>

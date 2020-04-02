@@ -415,10 +415,8 @@ Path to hg executable on the agent (see [Path to hg executable detection](#Path+
 
 </td></tr></table>
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [Branch Remote Run Trigger](branch-remote-run-trigger.md)
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="branch-remote-run-trigger.md">Branch Remote Run Trigger</a>
+        </category>
+</seealso>

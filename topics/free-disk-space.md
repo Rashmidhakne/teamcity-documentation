@@ -88,10 +88,9 @@ If caching artifacts is undesirable (for example, when the artifacts are large a
 
 [//]: # (Internal note. Do not delete. "Free disk spaced145e166.txt")
 
- __  __
-
-__See also:__
-
-__Administrator's Guide__: [TeamCity Server Disk Space Watcher](teamcity-disk-space-watcher.md) | [Build Failure Conditions](build-failure-conditions.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="teamcity-disk-space-watcher.md">TeamCity Server Disk Space Watcher</a>
+            <a href="build-failure-conditions.md">Build Failure Conditions</a>
+        </category>
+</seealso>

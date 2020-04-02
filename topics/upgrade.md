@@ -231,11 +231,12 @@ To upgrade the service wrapper manually, do the following:
 This procedure is applicable ONLY to an agent running with _new_ service wrapper. Make sure you are not running the __agentd__ service.
 </note>
 
-__  __
-
-__See also:__
-
-__Concepts__: [TeamCity Data Directory](teamcity-data-directory.md)   
-__Administrator's Guide__: [TeamCity Maintenance Mode](teamcity-maintenance-mode.md) | [TeamCity Data Backup](teamcity-data-backup.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="teamcity-data-directory.md">TeamCity Data Directory</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="teamcity-maintenance-mode.md">TeamCity Maintenance Mode</a>
+            a href="teamcity-data-backup.md">TeamCity Data Backup</a>
+        </category>
+</seealso>

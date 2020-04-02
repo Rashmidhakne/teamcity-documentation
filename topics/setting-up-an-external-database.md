@@ -198,24 +198,15 @@ TeamCity uses Apache DBCP for database connection pooling. Refer to [Apache Comm
 
 
 
- __  __
- 
-__See also:__
-
- 
-__Installation and Upgrade__: [Common database-related problems](common-problems.md) | [Migrating to an External Database](migrating-to-an-external-database.md)   
-__Concepts__: [TeamCity Data Directory](teamcity-data-directory.md)   
-__Administrator's Guide__: [TeamCity Data Backup](teamcity-data-backup.md)
- 
-__ __
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+ <seealso>
+        <category ref="installation">
+            <a href="common-problems.md">Common database-related problems</a>
+            <a href="migrating-to-an-external-database.md">Migrating to an External Database</a>
+        </category>
+        <category ref="concepts">
+            <a href="teamcity-data-directory.md">TeamCity Data Directory</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="teamcity-data-backup.md">TeamCity Data Backup</a>
+        </category>
+</seealso>

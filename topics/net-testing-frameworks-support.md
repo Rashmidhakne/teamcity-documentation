@@ -35,10 +35,8 @@ As for coverage, Gallio supports NCover, to include coverage HTML reports to Tea
 
 [General information](http://xunit.github.io/docs/getting-test-results-in-teamcity.html) about xUnit support from its authors. Also a related [blog post](http://blog.benhall.me.uk/2008/09/xunit-teamcity-integration.html).
 
-__  __
-
-__See also:__
-
-__Troubleshooting__: [Visual C Build Issues](visual-c-build-issues.md)
-
-__ __
+<seealso>
+        <category ref="troubleshooting">
+            <a href="visual-c-build-issues.md">Visual C Build Issues</a>
+        </category>
+</seealso>

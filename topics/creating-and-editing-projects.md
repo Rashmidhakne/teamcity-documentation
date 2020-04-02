@@ -319,10 +319,8 @@ The \<[TeamCity Data Directory](teamcity-data-directory.md)\>/config/_trash/ dir
 If you attempt to delete a project with [dependent build configurations](dependent-build.md) from other projects, TeamCity will warn you about it. If you proceed with the deletion, the dependencies will no longer function.
 </tip>
 
- __  __
-
-__See also:__
-
-__Administrator's Guide__: [Creating and Editing Build Configurations](creating-and-editing-build-configurations.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="creating-and-editing-build-configurations.md">Creating and Editing Build Configurations</a>
+        </category>
+</seealso>

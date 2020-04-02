@@ -16,11 +16,11 @@ There are several known issues in Bugzilla regarding XMLs generated for the issu
 * If you see the _path/to/bugzilla.dtd not found_ error, this means that the issue XML contains the relative path to the `bugzilla.dtd` file, and not the URL. To fix that, set the server URL in Bugzilla.
 * Sometimes you may see a `SAXParseException` saying that _Open quote is expected for attribute type\_id associated with an element type flag_. This happens because the generated XML does not correspond to the bundled `bugzilla.dtd`. To fix it, make the `type_id` attribute `#IMPLIED` (optional) in the bugzilla.dtd file. The issue and the workaround are described in detail [here](http://jake.murzy.com/post/2661770569/errors-while-performing-validation-against-bugzilla-dtd).
 
- __  __
-
-__See also:__
-
-__Concepts__: [Supported Platforms and Environments](supported-platforms-and-environments.md)   
-__Administrator's Guide__: [Integrating TeamCity with Issue Tracker](integrating-teamcity-with-issue-tracker.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="supported-platforms-and-environments.md">Supported Platforms and Environments</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="integrating-teamcity-with-issue-tracker.md">Integrating TeamCity with Issue Tracker</a>
+        </category>
+</seealso>

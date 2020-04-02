@@ -170,10 +170,8 @@ A. When the settings are changed via the UI, TeamCity waits for the changes to b
 Q. Who are the changes authored by?   
 A. If the settings are changed via the user interface, in Git and Mercurial a commit in the VCS will be performed on behalf of the user who actually made the change via the UI. For Perforce as well as Azure DevOps Server (formerly TFS), the name of the user specified in the VCS root is used, and in Subversion the commit message will also contain the username of the TeamCity user who actually made the change via the UI.
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [Kotlin DSL](kotlin-dsl.md) 
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="kotlin-dsl.md">Kotlin DSL</a>
+        </category>
+</seealso>

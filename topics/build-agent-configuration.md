@@ -98,11 +98,13 @@ Since TeamCity 2017.1 it is possible to configure a forward proxy server for age
 <include src="how-to.md" include-id="agent-proxy-server"/>
 
  
-__  __
-
-__See also:__
-
-__Concepts__: [Build Agent](build-agent.md)   
-__Administrator's Guide__: [Predefined Build Parameters](predefined-build-parameters.md) | [Configuring Agent Requirements](configuring-agent-requirements.md) | [Configuring Build Parameters](configuring-build-parameters.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="build-agent.md">Build Agent</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="predefined-build-parameters.md">Predefined Build Parameters</a>
+            <a href="configuring-agent-requirements.md">Configuring Agent Requirements</a>
+            <a href="configuring-build-parameters.md">Configuring Build Parameters</a>
+        </category>
+</seealso>

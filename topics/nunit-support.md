@@ -373,11 +373,12 @@ __\*__ TeamCity-provided tasks may have different syntax/behavior. Some workarou
 
 In addition to the common test reporting features, TeamCity allows running NUnit tests under the x86 process on the x64 machine by introducing an explicit specification of the platform and runtime environment versions. You can define whether to use .NET Framework 1.1, 2.0 or 4.0 started under an MSIL, x64 or x86 platform.
 
- __  __
-
-__See also:__
-
-
-__Administrator's Guide__: [NUnit build runner](nunit.md) | [Getting Started with NUnit](getting-started-with-nunit.md) | [MSTest Support](mstest-support.md) | [Running Risk Group Tests First](running-risk-group-tests-first.md) | [XML Report Processing](xml-report-processing.md)
-
-__ __
+ <seealso>
+        <category ref="admin-guide">
+            <a href="nunit.md">NUnit build runner</a>
+            <a href="getting-started-with-nunit.md">Getting Started with NUnit</a>
+            <a href="mstest-support.md">MSTest Support</a>
+            <a href="running-risk-group-tests-first.md">Running Risk Group Tests First</a>
+            <a href="xml-report-processing.md">XML Report Processing</a>
+        </category>
+</seealso>

@@ -273,10 +273,9 @@ Open the [build results page](working-with-build-results.md), click the __Action
 
 It is also possible to merge branches [automatically](automatic-merge.md).
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [Git](git.md) | [Mercurial](mercurial.md)
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="git.md">Git</a>
+            <a href="mercurial.md">Mercurial</a>
+        </category>
+</seealso>

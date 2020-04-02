@@ -1028,10 +1028,8 @@ An __unsupported__ rule example is `+:some/dir=>some/otherDir`.
 
 Git support is implemented as an open-source plugin. For development links, refer to the [plugin's page](https://plugins.jetbrains.com/plugin/8887-git).
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [Branch Remote Run Trigger](branch-remote-run-trigger.md)
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="branch-remote-run-trigger.md">Branch Remote Run Trigger</a>
+        </category>
+</seealso>

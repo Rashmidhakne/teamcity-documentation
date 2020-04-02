@@ -141,10 +141,8 @@ There are builds that preserve all their data and are not affected during clean-
 
 [//]: # (Internal note. Do not delete. "Clean-Upd55e230.txt")    
 
-__  __
- 
-__See also:__
-
-__Concepts__: [Dependent Build](dependent-build.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="dependent-build.md">Dependent Build</a>
+        </category>
+</seealso>

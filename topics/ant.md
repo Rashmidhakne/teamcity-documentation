@@ -342,10 +342,8 @@ Ant Version
 
 </table>
  
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [Configuring Java Code Coverage](configuring-java-code-coverage.md)
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="configuring-java-code-coverage.md">Configuring Java Code Coverage</a>
+        </category>
+</seealso>

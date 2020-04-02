@@ -120,10 +120,8 @@ Note that you do not need to write any additional build scripts.
 
 
 
-__  __
-
-__See also:__
-
-__Administrator's Guide__: [Configuring .NET Code Coverage](configuring-.net-code-coverage.md)
-
-__ __
+<seealso>
+        <category ref="admin-guide">
+            <a href="configuring-.net-code-coverage.md">Configuring .NET Code Coverage</a>
+        </category>
+</seealso>

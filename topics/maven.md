@@ -382,11 +382,12 @@ _In the settings for your build configuration in TeamCity_:
 5\. Specify `release:prepare` in the __Goals__ field of the Maven build step and run the build.
 
 
-__  __
-
-__See also:__
-
-__Concepts__: [Build Runner](build-runner.md)    
-__Administrator's Guide__: [Maven Artifact Dependency Trigger](configuring-maven-triggers.md) | [Creating Maven Build Configuration](creating-and-editing-build-configurations.md)
-
-__ __
+<seealso>
+        <category ref="concepts">
+            <a href="build-runner.md">Build Runner</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="configuring-maven-triggers.md">Maven Artifact Dependency Trigger</a>
+            <a href="creating-and-editing-build-configurations.md">Creating Maven Build Configuration</a>
+        </category>
+</seealso>

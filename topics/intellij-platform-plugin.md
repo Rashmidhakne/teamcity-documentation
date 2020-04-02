@@ -66,10 +66,8 @@ All additional information on how to work with the TeamCity plugin is available 
 3. Set "Check for updates" to "Daily".
 4. Press __Apply__, then __Check Now__.
 
-__  __
- 
-__See also:__
-
-__Troubleshooting__: [Logging in IntelliJ IDEA/Platform-based IDEs](reporting-issues.md)
-
-__ __
+<seealso>
+        <category ref="troubleshooting">
+            <a href="reporting-issues.md">Logging in IntelliJ IDEA/Platform-based IDEs</a>
+        </category>
+</seealso>

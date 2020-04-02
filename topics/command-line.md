@@ -128,12 +128,14 @@ To learn about configuring code coverage options, refer to the [Configuring Java
 
 
 
-__  __
+<seealso>
+        <category ref="concepts">
+            <a href="build-runner.md">Build Runner</a>
+            <a href="build-checkout-directory.md">Build Checkout Directory</a>
+            <a href="build-working-directory.md">Build Working Directory</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="configuring-build-steps.md">Configuring Build Steps</a>
+        </category>
+</seealso>
 
-__See also:__
-
-
-__Concepts__: [Build Runner](build-runner.md) | [Build Checkout Directory](build-checkout-directory.md) | [Build Working Directory](build-working-directory.md)   
-__Administrator's Guide__: [Configuring Build Steps](configuring-build-steps.md)
-
-__ __

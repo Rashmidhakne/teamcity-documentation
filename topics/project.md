@@ -50,12 +50,14 @@ The root project is special in the following ways:
 * it can have no build configurations.
 * it does not appear in the user-level UI and is mostly present as an entity in Administration UI only.
 
- __  __
-
-__See also:__
-
-
-__Concepts__: [Build Configuration](build-configuration.md)   
-__Administrator's Guide__: [Managing Projects and Build Configurations](managing-projects-and-build-configurations.md) | [Creating and Editing Projects](creating-and-editing-projects.md) | [Creating and Editing Build Configurations](creating-and-editing-build-configurations.md) | [Project Export](project-export.md)
-
-__ __
+ <seealso>
+        <category ref="concepts">
+            <a href="build-configuration.md">Build Configuration</a>
+        </category>
+        <category ref="admin-guide">
+            <a href="managing-projects-and-build-configurations.md">Managing Projects and Build Configurations</a>
+            <a href="creating-and-editing-projects.md">Creating and Editing Projects</a>
+            <a href="creating-and-editing-build-configurations.md">Creating and Editing Build Configurations</a>
+            <a href="project-export.md">Project Export</a>
+        </category>
+</seealso>
