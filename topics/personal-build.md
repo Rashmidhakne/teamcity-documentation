@@ -49,7 +49,7 @@ __To upload a patch and run a personal build via REST API__:
        --data-binary @patch.diff \
        "http://<username>:<password>@<host>:<port>/uploadDiffChanges.html?description=<description-text>&commitType=0"
    ```
-   As a response, you will receive the ID of this change on the server.
+   As a response, you will receive the ID of this change on the server.   
 2. Create an XML file that describes the build node and mentions the build configuration ID and the ID of your personal change:
    ```xml
    <build personal="true">
@@ -60,7 +60,7 @@ __To upload a patch and run a personal build via REST API__:
        <change id="<change_ID>" personal="true"/>
      </lastChanges>
    </build>
-   ```
+   ```   
 3. To trigger a personal build via REST API, post the created file to the `buildQueue` endpoint:
    ```Shell
     curl \
@@ -69,7 +69,7 @@ __To upload a patch and run a personal build via REST API__:
         -H "Origin: <host>:<port>" \
         --data @node.xml \
         "http://<username>:<password>@<host>:<port>/app/rest/buildQueue"
-   ```
+   ```   
    The agent will receive the patch and apply it before running the build. After the build, it will revert the patch, so the checkout directory can be reused by subsequent builds.
 
  <seealso>
