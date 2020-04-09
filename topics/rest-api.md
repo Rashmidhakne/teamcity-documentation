@@ -6,15 +6,17 @@ TeamCity provides a REST API for integrating external applications and creating 
 This page comprises three main sections:
 * __[General Information](#General+Information)__ describes principles of the REST API authentication, structure of requests, and supported HTTP methods.
 * __[Response Formats](#Response+Formats)__ explains how to interpret responses received via the REST API.
-* __[REST API Reference](#REST+API+Reference)__ lists the most used requests and provides examples.
+* __[REST API Reference](#REST+API+Reference)__ lists the most used data entity requests.
 
-# General Information
+See also [request examples](#Request+Examples).
+
+## General Information
  
 REST API is an open-source [plugin](https://github.com/JetBrains/teamcity-rest) bundled __since TeamCity 5.0__.
 
 TeamCity's REST API allows accessing resources (entities) via URL paths. To use the REST API, an external application makes an HTTP request to the TeamCity server and parses the response.
  
-## General Usage Principles
+### General Usage Principles
 
 <note>
 
@@ -40,7 +42,7 @@ Suppose you want to know more on the agents and see (in the `/app/rest/server` r
 * If you send a request to `/app/rest/agents/$help`, or `/app/rest/agents/aaa:bbb` (supplying unsupported locator dimension), you will get the list of the supported dimensions to find an agent via the agent's [locator](#Locator).
 * Most of the attributes of the returned agent data (`name`, `connected`, `authorized`) can be used as the `<field_name>` in the `app/rest/agents/<agentLocator>/<field_name>` request. Moreover, if you issue a request to the `app/rest/agents/id:10/test` URL, you will get a list of the supported fields in the error message.
  
-## REST Authentication
+### REST Authentication
 
 You can authenticate in the REST API in the following ways:
 * The preferred way to access REST API is by using the [token-based HTTP authentication](configuring-authentication-settings.md#Token-Based+Authentication). Provide your personal TeamCity access token generated on __My Settings &amp; Tools | Access Tokens__ in the HTTP header `Authorization: Bearer <token-value>`. For example:
@@ -62,11 +64,11 @@ curl -u "%system.teamcity.auth.userId%:%system.teamcity.auth.password%" "%teamci
  
 ```
  
-## Superuser access
+### Superuser access
  
 You can use the [super user account](super-user.md) with REST API: just provide no username and the generated password logged into the server log.
  
-## REST API Versions
+### REST API Versions
  
 As REST API evolves from one TeamCity version to another, there can be incompatible changes in the protocol.
  
@@ -81,7 +83,7 @@ Breaking changes in the API are described in the related [Upgrade Notes](upgrade
 The examples on this page use the `/app/rest` relative URL; replace it with the one containing the version if necessary.
 </note>
  
-## URL Structure
+### URL Structure
  
 The general structure of the URL in the TeamCity API is [`http://teamcityserver:port/<authType>/app/rest/<apiVersion>/<restApiPath>?<parameters>`](http://teamcityserver:port/<authType>/app/rest/<apiVersion>/<restApiPath>?<parameters>)
  
@@ -93,7 +95,7 @@ where
 * `<restApiPath>?<parameters>` is the REST API part of the URL.  
 A typical way to get multiple items is to use `<restApiPath>` in the form of `.../app/rest/<items>` (for example, "`.../app/rest/builds`"). These URLs regularly accept the [locator](#Locator) parameter which can filter the items returned. Individual items can regularly be addressed by a URL in the form of `.../app/rest/<items>/<item_locator>`. This URL always returns a single item. If the `<item_locator>` locator matches several items, the first one is returned. Both multiple and single items requests regularly support the [fields](#Full+and+Partial+Responses) parameter.
  
-## Locator
+#### Locator
  
 In a number of places, you can specify a filter string which defines what entities to filter/affect in the request. This string representation is referred to as _locator_ in the scope of the TeamCity REST API.
  
@@ -107,7 +109,6 @@ Note that nested locators should be enclosed in parentheses. Refer to each entit
 If the single value contains the `,` symbol, it should be enclosed into parentheses: `(<value>)`. The value of a dimension can also be encoded as Base64url ("URL and Filename safe type base64" from RFC4648) and sent as `<dimension>:($base64:<base64-encoded-value>)` instead of `<dimension>: <value>`.
 </note>
  
- 
 Examples:
  
 * Use [`http://teamcity:8111/app/rest/projects`](http://teamcity:8111/app/rest/projects) to get the list of projects.
@@ -115,14 +116,44 @@ Examples:
 * Use [`http://teamcity:8111/app/rest/buildTypes/id:bt284/builds?locator=<buildLocator>`](http://teamcity:8111/app/rest/buildTypes/id:bt284/builds?locator=<buildLocator>), for example [`http://teamcity:8111/app/rest/buildTypes/id:bt284/builds?locator=status:SUCCESS,tag:EAP`](http://teamcity:8111/app/rest/buildTypes/id:bt284/builds?locator=status:SUCCESS,tag:EAP) (example IDs are used) to get builds.
 * Use [`http://teamcity:8111/app/rest/builds/?locator=<buildLocator>`](http://teamcity:8111/app/rest/builds/?locator=<buildLocator>) to get builds by build locator.
  
- 
-## Supported HTTP Methods
+#### Supported HTTP Methods
 * __`GET`__: retrieves the requested data. For example, `.../app/rest/entities` usually retrieves a list of entities, `.../app/rest/entities/<entity locator>` retrieves a single entity
 * __`POST`__: creates the entity from the payload submitted. To create a new entity, one regularly needs to post a single entity data (i.e. as retrieved via GET) to the `.../app/rest/entities` URL. When posting XML, be sure to specify the "`Content-Type: application/xml`" HTTP header.
 * __`PUT`__: updates the data from the payload submitted. Accepts the same data format as retrieved via GET request to the same URL. Supported for some entities for URLs like `.../app/rest/entities/<entity locator>`
 * __`DELETE`__: removes the data at the URL, for example, for the `.../app/rest/entities/<entity locator>`
  
-# Response Formats
+### Logging
+ 
+You can get details on errors and REST request processing in the `logs\teamcity-rest.log` [server log](teamcity-server-logs.md).
+
+If you get an error in response to your request and want to investigate the reason, look into [rest-related server logs](#Logging).
+ 
+To get details about each processed request, turn on debug logging (for example, set Logging Preset to `debug-rest` on the [Administration/Diagnostics](teamcity-monitoring-and-diagnostics.md#Debug+Logging) page or modify the Log4J `jetbrains.buildServer.server.rest` category).
+ 
+### CORS Support
+ 
+The TeamCity REST API can be configured to allow [cross-origin requests](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) using the `rest.cors.origins` [internal property](configuring-teamcity-server-startup-properties.md#TeamCity+internal+properties).
+ 
+To allow requests from a page loaded from a specific domain, add the page address (including the __protocol and port__, __wildcards are not supported__) to the comma-separated [internal property](configuring-teamcity-server-startup-properties.md#TeamCity+internal+properties) `rest.cors.origins`. For example, `rest.cors.origins=http://myinternalwebpage.org.com:8080,https://myinternalwebpage.org.com`.
+ 
+To enable support for a [preflight OPTIONS request](https://youtrack.jetbrains.com/issue/TW-27606):
+1. Add the `rest.cors.optionsRequest.allowUnauthorized=true` [internal property](configuring-teamcity-server-startup-properties.md#TeamCity+internal+properties).
+2. __Restart__ the TeamCity server.
+3. Use the `/app/rest/latest` URL for the requests.  Do not use `/app/rest`, do not use the `httpAuth` prefix.
+If that does not help, enable debug [logging](#Logging) and look for related messages. If there are none, capture the browser traffic and messages to investigate the case.
+ 
+### API Client Recommendations
+ 
+When developing a client using the REST API, consider the following recommendations:
+* Make the root REST API URL configurable (for example, allow specifying an alternative for `app/rest/<version>` part of the URL). This will allow directing the client to another version of the API if necessary.
+* Ignore (do not error out) item's attributes and sub-items which are unknown to the client. New sub-items are sometimes added to the API without version change and this will ensure the client is not affected by the change.
+* Set large (and make them configurable) request timeouts. Some API calls can take minutes, especially on a large server.
+* Use HTTP sessions to make consecutive requests (use the `TCSESSIONID` cookie returned from the first authenticated response instead of supplying raw credentials all the time). This saves time on authentication which can be significant for external authentication providers.
+* Beware of partial answers when requesting list of items: some requests are paged by default. Value of the `count` attribute in the response indicate the number of the items on the current page and there can be more pages available. If you need to process more (or all) items, read and process the `nextHref` attribute of the response entity for items collections. If the attribute is present it means there might be more items when queried by the URL provided. Related locator dimensions are `count` (page limit) and `lookupLimit` (depth of search). Even when the returned `count` is 0, it does not mean there are no more items if there is the "nextHref" attribute present.
+* Do not increase the `lookupLimit` value in the locators without a second thought. Doing so has the direct effect of loading the server more and may require increased amounts of CPU and memory. It is assumed that those increasing the default limit understand the negative consequences for the server performance.
+* Do not abuse the ability to execute automated requests for TeamCity API: do not query the API too frequently and restrict the data requested to only that necessary (using due [locators](#Locator) and specifying necessary [fields](#Full+and+Partial+Responses)). Check the server behavior under load from your requests. Make sure not to repeat the request frequently if it takes time to process the request.
+ 
+## Response Formats
  
 The TeamCity REST APIs returns HTTP responses in the following formats according to the HTTP "Accept" header:
  
@@ -159,7 +190,7 @@ plain text
  
 <td>
  
-single\-value responses
+single-value responses
  
 </td>
  
@@ -208,7 +239,7 @@ application/json
  
 </td></tr></table>
  
-## Full and Partial Responses
+### Full and Partial Responses
  
 By default, when a list of entities is requested, only basic fields are included into the response. When a single entry is requested, all the fields are returned. The complex field values can be returned in full or basic form, depending on a specific entity.
  
@@ -227,41 +258,9 @@ http://teamcity.jetbrains.com/app/rest/builds?locator=buildType:(id:bt345),count
 ```
  
 At this time, the response can sometimes include the fields/elements not specifically requested. This can change in the future versions, so it is recommended to specify all the fields/elements used by the client.
- 
-## Logging
- 
-You can get details on errors and REST request processing in the `logs\teamcity-rest.log` [server log](teamcity-server-logs.md).
 
-If you get an error in response to your request and want to investigate the reason, look into [rest-related server logs](#Logging).
- 
-To get details about each processed request, turn on debug logging (for example, set Logging Preset to `debug-rest` on the [Administration/Diagnostics](teamcity-monitoring-and-diagnostics.md#Debug+Logging) page or modify the Log4J `jetbrains.buildServer.server.rest` category).
- 
-## CORS Support
- 
-The TeamCity REST API can be configured to allow [cross-origin requests](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) using the `rest.cors.origins` [internal property](configuring-teamcity-server-startup-properties.md#TeamCity+internal+properties).
- 
-To allow requests from a page loaded from a specific domain, add the page address (including the __protocol and port__, __wildcards are not supported__) to the comma-separated [internal property](configuring-teamcity-server-startup-properties.md#TeamCity+internal+properties) `rest.cors.origins`. For example, `rest.cors.origins=http://myinternalwebpage.org.com:8080,https://myinternalwebpage.org.com`.
- 
-To enable support for a [preflight OPTIONS request](https://youtrack.jetbrains.com/issue/TW-27606):
-1. Add the `rest.cors.optionsRequest.allowUnauthorized=true` [internal property](configuring-teamcity-server-startup-properties.md#TeamCity+internal+properties).
-2. __Restart__ the TeamCity server.
-3. Use the `/app/rest/latest` URL for the requests.  Do not use `/app/rest`, do not use the `httpAuth` prefix.
-If that does not help, enable debug [logging](#Logging) and look for related messages. If there are none, capture the browser traffic and messages to investigate the case.
- 
-## API Client Recommendations
- 
-When developing a client using the REST API, consider the following recommendations:
-* Make the root REST API URL configurable (for example, allow specifying an alternative for `app/rest/<version>` part of the URL). This will allow directing the client to another version of the API if necessary.
-* Ignore (do not error out) item's attributes and sub-items which are unknown to the client. New sub-items are sometimes added to the API without version change and this will ensure the client is not affected by the change.
-* Set large (and make them configurable) request timeouts. Some API calls can take minutes, especially on a large server.
-* Use HTTP sessions to make consecutive requests (use the `TCSESSIONID` cookie returned from the first authenticated response instead of supplying raw credentials all the time). This saves time on authentication which can be significant for external authentication providers.
-* Beware of partial answers when requesting list of items: some requests are paged by default. Value of the `count` attribute in the response indicate the number of the items on the current page and there can be more pages available. If you need to process more (or all) items, read and process the `nextHref` attribute of the response entity for items collections. If the attribute is present it means there might be more items when queried by the URL provided. Related locator dimensions are `count` (page limit) and `lookupLimit` (depth of search). Even when the returned `count` is 0, it does not mean there are no more items if there is the "nextHref" attribute present.
-* Do not increase the `lookupLimit` value in the locators without a second thought. Doing so has the direct effect of loading the server more and may require increased amounts of CPU and memory. It is assumed that those increasing the default limit understand the negative consequences for the server performance.
-* Do not abuse the ability to execute automated requests for TeamCity API: do not query the API too frequently and restrict the data requested to only that necessary (using due [locators](#Locator) and specifying necessary [fields](#Full+and+Partial+Responses)). Check the server behavior under load from your requests. Make sure not to repeat the request frequently if it takes time to process the request.
-
-# REST API Reference
- 
-## TeamCity Data Entities Requests
+## REST API Reference
+[//]: # (AltHead: TeamCity Data Entities Requests)
  
 ### Projects and Build Configuration/Templates Lists
 
@@ -1065,8 +1064,6 @@ curl -v --basic --user <username>:<password> --request PUT http://<teamcity.url>
 
 </table>
  
-
- 
 #### Build Configuration Locator
  
 The most frequently used values for `<buildTypeLocator>` are `id:<buildConfigurationOrTemplate_id>` and `name:<Build%20Configuration%20name>`.
@@ -1081,9 +1078,7 @@ Other supported [dimensions](#Locator) are (these are in _experimental_ state):
 * `templateFlag` – boolean value to get only templates or only non-templates.
 * `paused` – boolean value to filter paused/not paused build configurations.
  
- 
 [//]: # (Internal note. Do not delete. "REST APId269e1377.txt")    
- 
  
 ### Build Requests
 
@@ -1142,8 +1137,6 @@ GET http://teamcity:8111/app/rest/buildTypes?locator=affectedProject:(id:Project
 
 
 </table>
- 
-
  
 #### Build Locator
  
@@ -1279,7 +1272,6 @@ GET http://teamcity:8111/app/rest/buildQueue?locator=buildType:<locator>
 </td></tr>
 
 </table>
-
  
 #### Triggering a Build
  
@@ -2850,7 +2842,6 @@ DELETE http://teamcity:8111/app/rest/users/<userLocator>/tokens/<tokenName>
 
 </table>
 
-
 ### Audit Records
 
 <table>
@@ -2875,10 +2866,10 @@ GET http://teamcity:8111/app/rest/audit
 </table>
 
 You can filter records by user, system action, build type, and so on (use `GET` [`http://teamcity:8111/app/rest/audit?locator=$help`](http://teamcity:8111/app/rest/audit?locator=$help) to see all available filters).
- 
-## Other
- 
+
 ### Data Backup
+[//]: # (AltHead: Other)
+
 
 <table>
 
@@ -2979,7 +2970,7 @@ Create a new parameter
 
 <td>
 
-`POST` the same XML or JSON or just plain\-text as returned by `GET` to [`http://teamcity:8111/app/rest/buildTypes/<locator>/parameters/`](http://teamcity:8111/app/rest/buildTypes/<locator>/parameters/). Note that [secure parameters](typed-parameters.md), for example `type=password`, are listed, but the values not included into response, so the result should be amended before POSTing back.
+`POST` the same XML or JSON or just plain-text as returned by `GET` to [`http://teamcity:8111/app/rest/buildTypes/<locator>/parameters/`](http://teamcity:8111/app/rest/buildTypes/<locator>/parameters/). Note that [secure parameters](typed-parameters.md), for example `type=password`, are listed, but the values not included into response, so the result should be amended before POSTing back.
 
 </td></tr>
 
@@ -3187,9 +3178,9 @@ Without authentication (only build configurations available for guest user): [`h
 The CCTray-format XML does not include paused build configurations by default. The URL accepts the `locator` parameter instead with standard [build configuration locator](#Build+Configuration+Locator).
  
 ## Request Examples
- 
-### Request Sending Tool
- 
+
+[//]: # (AltHead: Request Sending Tool)
+
 You can use [curl](http://en.wikipedia.org/wiki/CURL) command line tool to interact with the TeamCity REST API.
  
 Example command:
@@ -3201,7 +3192,7 @@ where `USERNAME`, `PASSWORD`, `teamcity:8111` are to be substituted with real va
 
 <anchor name="exampleNewProjectCurl"/>
  
-#### Creating a new project
+### Creating a new project
  
 Using curl tool:
  
@@ -3211,7 +3202,7 @@ curl -v -u USER:PASSWORD http://teamcity:8111/app/rest/projects --header "Conten
  
 ```
  
-#### Making user a system administrator
+### Making user a system administrator
  
 1. Get [super user](super-user.md) token.
 2. Issue the request.
