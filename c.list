@@ -24,6 +24,7 @@
     <category id="groovy" name="Groovy and Groovy-Based Frameworks" order="111"/>
     <category id="php" name="PHP Support" order="70"/>
     <category id="external" name="External Links" order="56"/>
+    <category id="blog" name="TeamCity Blog" order="57"/>
     <category id="markup" name="Markup languages and style sheets" order="42"/>
     <category id="tips" name="Tips" order="98"/>
     <category id="reference" name="Reference" order="6"/>
